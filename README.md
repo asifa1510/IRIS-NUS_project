@@ -1,4 +1,4 @@
-# 🧬 **Discovering and Validating Hidden Physical Regimes and Piecewise Symbolic Laws in Nonlinear Dynamical Systems**
+# 🧬 **Regime Aware Symbolic Discovery of Hidden Physical Laws in Semibatch Polymerization Reactors**
 
 > An interpretable AI-for-Science framework that discovers, validates, and explains hidden physical regimes and their governing symbolic laws in nonlinear dynamical systems, demonstrated on the Chylla-Haase semibatch polymerization reactor.
 
