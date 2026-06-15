@@ -106,12 +106,49 @@
 <img width="992" height="493" alt="image" src="https://github.com/user-attachments/assets/a83de22f-a317-42ae-bd8b-580d4059b478" />
 
 
+> Blue: reactor temperature
+>
+> 
+> Dashed: target temperature
+> 
+> Orange/green: jacket temperatures
+> 
+> Early overshoot from strong heating
+> 
+> Later oscillations settle near target
+
+
+
 <img width="1032" height="515" alt="image" src="https://github.com/user-attachments/assets/7e71ada3-462d-47dd-b00d-4ffe01266e87" />
 
+>Green: feed on/off
+>
+>Blue: monomer mass
+>
+>Orange: polymer mass
+>
+>Feed on → monomer rises
+>
+>Feed off → monomer falls, polymer rises
 
 <img width="992" height="492" alt="image" src="https://github.com/user-attachments/assets/9d774c17-1a3d-4836-a649-4a9b019b89d6" />
-
+>Each line = one batch
+>
+>Different conditions create different curves
+>
+>Most batches operate near 355–365 K
+>
+>Some show stronger peaks or dips
+>
+>Variation is useful for regime discovery
 
 <img width="575" height="495" alt="image" src="https://github.com/user-attachments/assets/e84d9a8e-753a-4904-8066-28b1d62b8ea2" />
-
-
+>X-axis: temperature
+>
+>Y-axis: heating/cooling rate
+>
+>Above 0 = heating
+>
+>Below 0 = cooling
+>
+>Separate shapes suggest different behaviours/regimes
