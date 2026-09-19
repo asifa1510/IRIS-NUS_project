@@ -1,0 +1,40 @@
+# Python environments
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+.env.*
+*.key
+*.pem
+
+# Large generated datasets
+data/processed/
+data/frozen/
+
+# Large training intermediates
+results/module2_final/windows/
+results/module2_final/models/
+
+# Model checkpoints
+*.pt
+*.pth
+*.ckpt
+
+# Logs / experiment trackers
+wandb/
+runs/
+logs/

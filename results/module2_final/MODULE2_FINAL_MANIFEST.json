@@ -1,0 +1,28 @@
+{
+    "module": "Module 2",
+    "method_name": "PI-MambaRegime",
+    "dataset": "CH-Regime-220-v1",
+    "input_dataset": "D:\\ASIFA\\iris\\data\\frozen\\CH-Regime-220-v1\\ch_regime_physics_trajectories.csv",
+    "output_root": "D:\\ASIFA\\iris\\results\\module2_final",
+    "window_dir": "D:\\ASIFA\\iris\\results\\module2_final\\windows",
+    "model_dir": "D:\\ASIFA\\iris\\results\\module2_final\\models",
+    "embedding_dir": "D:\\ASIFA\\iris\\results\\module2_final\\embeddings",
+    "regime_dir": "D:\\ASIFA\\iris\\results\\module2_final\\regimes",
+    "figure_dir": "D:\\ASIFA\\iris\\results\\module2_final\\figures",
+    "command_config": {
+        "resumed_from_checkpoint": true,
+        "checkpoint": "D:\\ASIFA\\iris\\results\\module2_final\\models\\pi_mamba_regime_final_best.pt",
+        "k_min": 4,
+        "k_max": 8,
+        "seed": 42,
+        "embedding_batch_size": 512
+    },
+    "important_files": {
+        "best_model": "D:\\ASIFA\\iris\\results\\module2_final\\models\\pi_mamba_regime_final_best.pt",
+        "training_history": "D:\\ASIFA\\iris\\results\\module2_final\\models\\training_history.csv",
+        "embeddings": "D:\\ASIFA\\iris\\results\\module2_final\\embeddings\\pi_mamba_embeddings.npy",
+        "regime_assignments": "D:\\ASIFA\\iris\\results\\module2_final\\regimes\\regime_assignments.csv",
+        "regime_summary": "D:\\ASIFA\\iris\\results\\module2_final\\regimes\\regime_summary.csv",
+        "regime_reality_test": "D:\\ASIFA\\iris\\results\\module2_final\\regimes\\regime_reality_test_report.txt"
+    }
+}

@@ -1,0 +1,46 @@
+CH-REGIME JOURNAL DATASET ACCEPTANCE REPORT
+======================================================================
+
+DATASET SUMMARY
+----------------------------------------------------------------------
+n_rows: 396220
+n_trajectories: 220
+missing_values: 0
+split_counts: {'baseline': 20, 'ood': 20, 'test': 30, 'train': 120, 'val': 30}
+product_counts: {'A': 143, 'B': 77}
+season_counts: {'summer': 104, 'winter': 116}
+batch_counts: {1: 40, 2: 35, 3: 45, 4: 45, 5: 55}
+stage_counts: {'feed': 184784, 'hold': 180523, 'heatup': 30913}
+T_range_K: (277.26, 355.89591307485074)
+controlled_mean_abs_error_K: 0.18354922119303643
+controlled_95_abs_error_K: 0.6135046022568361
+controlled_within_0p5K_pct: 92.20025896027178
+controlled_within_1p0K_pct: 98.9009244279469
+energy_residual_median_abs_kW: 9.103828801926284e-15
+energy_residual_max_abs_kW: 3.597122599785507e-14
+monomer_residual_median_abs: 3.0394449942422776e-14
+polymer_residual_median_abs: 3.0400286631027364e-14
+max_valve_step_pct: 1.996750339405331
+max_feed_step_kg_s: 0.0006141205273678
+corr_viscosity_U: -0.5838177129169582
+corr_reaction_rate_reaction_heat: 1.0000000000000089
+overall_status: PASS
+
+ACCEPTANCE GATES
+----------------------------------------------------------------------
+PASS: missing_values_is_zero
+PASS: has_all_splits
+PASS: has_products_A_B
+PASS: has_seasons
+PASS: has_batches_1_to_5
+PASS: has_heatup_feed_hold
+PASS: energy_balance_good
+PASS: mass_balance_good
+PASS: valve_smooth
+PASS: U_decreases_with_viscosity
+PASS: reaction_heat_tracks_reaction_rate
+PASS: temperature_control_reasonable
+
+FINAL STATUS
+----------------------------------------------------------------------
+PASS

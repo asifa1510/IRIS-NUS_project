@@ -1,0 +1,16 @@
+{
+    "module": "Module 3",
+    "method": "RC-PhySR",
+    "target": "dTdt_K_min",
+    "input": "D:\\ASIFA\\iris\\results\\module2_final\\regimes\\regime_assignments.csv",
+    "output_root": "D:\\ASIFA\\iris\\results\\module3_rc_physr",
+    "n_samples": 47740,
+    "n_regime_laws": 8,
+    "final_status": "PASS",
+    "artifacts": {
+        "law_table": "D:\\ASIFA\\iris\\results\\module3_rc_physr\\tables\\symbolic_law_table.csv",
+        "metrics": "D:\\ASIFA\\iris\\results\\module3_rc_physr\\tables\\global_vs_regime_symbolic_metrics.csv",
+        "report": "D:\\ASIFA\\iris\\results\\module3_rc_physr\\reports\\law_reality_test_report.txt",
+        "figures": "D:\\ASIFA\\iris\\results\\module3_rc_physr\\figures"
+    }
+}

@@ -1,0 +1,80 @@
+MODULE 2 FINAL REGIME REALITY TEST REPORT
+========================================================================
+
+METHOD
+------------------------------------------------------------------------
+PI-MambaRegime: physics-informed Mamba-style temporal representation learning
+Training labels used for regime discovery: NONE
+Known labels used only for post-hoc interpretation: recipe_stage, product, season, split
+
+Selected K: 8
+Overall status: PASS
+
+CLUSTER MODEL SELECTION
+------------------------------------------------------------------------
+ K  silhouette  davies_bouldin            BIC            AIC  rank_silhouette  rank_db  rank_bic  combined_rank
+ 4    0.174993        2.075263 -137683.772137 -142674.046875              4.0      5.0       5.0          10.25
+ 5    0.145138        1.762136 -220186.708480 -226426.593750              5.0      4.0       4.0          10.00
+ 6    0.291178        1.586508 -269667.472949 -277156.968750              1.0      3.0       3.0           4.75
+ 7    0.246375        1.556604 -427590.799917 -436329.906250              3.0      1.0       2.0           4.50
+ 8    0.258234        1.582058 -464280.126885 -474268.843750              2.0      2.0       1.0           4.25
+
+REGIME SUMMARY
+------------------------------------------------------------------------
+ regime_id  n_windows  n_trajectories dominant_stage dominant_split dominant_product   mean_T_K  mean_dTdt_K_min  mean_feed_rate  mean_viscosity   mean_U  mean_Q_reaction  mean_Q_jacket  mean_conversion  mean_valve  mean_probability  window_pct
+         0       6379             116           feed          train                A 355.421056         0.002636    2.744310e-03      466.615872 0.322709         1.858338      -1.039274         0.996507   49.810427          0.995706   13.361961
+         1       6699             116           feed          train                A 353.604830         0.180988    2.235040e-03       19.686390 0.873967         1.495955      -0.113922         0.992497   50.012833          0.994787   14.032258
+         2       4119              55           hold          train                A 355.553612         0.000806    5.542139e-08      578.289949 0.205741         0.000046       0.352615         1.000000   50.020612          0.999907    8.627985
+         3       5801              74           hold          train                A 355.558471         0.024607    3.146302e-07      578.291599 0.203512         0.000251       0.590004         1.000000   50.171025          0.999396   12.151236
+         4       6338              73           hold          train                B 355.520579         0.008166    1.160856e-07     2319.865743 0.205027         0.000140       0.447522         1.000000   50.070591          0.999649   13.276079
+         5       5740             104           feed          train                A 355.470408         0.013312    2.761347e-03      449.487465 0.330163         1.870123      -1.169607         0.996514   49.720148          0.992765   12.023460
+         6       5623             104           feed          train                A 354.473325         0.102131    2.362346e-03       18.792464 0.891768         1.581542      -0.633400         0.992030   49.877261          0.991283   11.778383
+         7       7041             220           hold          train                A 355.525603        -0.029223    3.738987e-05     1019.553005 0.205504         0.033067       0.185744         0.999955   49.806991          0.998813   14.748638
+
+TEMPORAL COHERENCE
+------------------------------------------------------------------------
+ regime_id  median_run_length_windows  mean_run_length_windows  max_run_length_windows
+         0                        2.0                21.192691                      80
+         1                        2.0                22.255814                      78
+         2                        1.0                17.306723                     118
+         3                        2.0                 6.264579                     120
+         4                        2.0                13.095041                     121
+         5                       42.0                29.285714                      73
+         6                       40.5                28.688776                      70
+         7                        2.0                 4.178635                     120
+
+PHYSICS SEPARABILITY TOP FEATURES
+------------------------------------------------------------------------
+           feature  between_within_ratio
+         U_kW_m2_K              8.215992
+   solids_fraction              5.893171
+    feed_rate_kg_s              4.821591
+         Q_feed_kW              4.734841
+     Q_reaction_kW              4.687541
+reaction_rate_kg_s              4.687541
+   viscosity_proxy              3.514782
+         Q_loss_kW              2.148769
+  conversion_proxy              1.386394
+       Q_jacket_kW              0.176534
+
+LABEL-INDEPENDENCE CHECK
+------------------------------------------------------------------------
+NMI(regime, recipe_stage): 0.4520
+NMI(regime, product): 0.1726
+NMI(regime, season): 0.3622
+NMI(regime, dataset_split): 0.0191
+
+ACCEPTANCE GATES
+------------------------------------------------------------------------
+PASS: regime_count_reasonable_4_to_8
+PASS: all_regimes_recurrent_min_10_trajectories
+PASS: no_tiny_regime_min_1_percent
+PASS: temporal_coherence_median_run_ge_2_windows
+PASS: physics_separability_top5_mean_gt_0p05
+PASS: not_identical_to_recipe_stage_NMI_lt_0p90
+PASS: not_identical_to_product_NMI_lt_0p80
+PASS: average_assignment_probability_gt_0p50
+
+FINAL STATUS
+------------------------------------------------------------------------
+PASS
